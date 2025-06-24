@@ -16,7 +16,6 @@ from django.core.exceptions import ValidationError
 from django.db.models import Q
 from django.utils.translation import gettext_lazy as _
 
-from django_admin_search import utils
 
 
 class AdvancedSearchAdmin(ModelAdmin):
@@ -413,7 +412,7 @@ SWAGGER_SETTINGS = {
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "https://krafto-agency.onrender.com",
+    "https://krafto-agency-admin.onrender.com",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
@@ -421,7 +420,7 @@ CSRF_COOKIE_NAME = "csrftoken"
 CSRF_COOKIE_SAMESITE = "Lax"  
 CSRF_COOKIE_SECURE = True 
 
-CSRF_TRUSTED_ORIGINS = ["https://tash-cleaning-admin-one.vercel.app", "https://krafto-agency.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://tash-cleaning-admin-one.vercel.app", "https://krafto-agency-admin.onrender.com"]
 
 CSRF_COOKIE_HTTPONLY = False
 
