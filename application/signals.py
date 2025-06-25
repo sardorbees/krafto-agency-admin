@@ -1,12 +1,10 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from application.models import Application
-from notifications.models import Notification
+from .models import ApplicationForm
 
-@receiver(post_save, sender=Application)
+@receiver(post_save, sender=ApplicationForm)
 def create_notification_on_new_application(sender, instance, created, **kwargs):
     if created:
-        Notification.objects.create(
-            title="Новая заявка",
-            message=f"Поступила новая заявка от {instance.full_name} ({instance.email})"
-        )
+        print(f"✅ Новая заявка от: {instance.full_name}")
+        if instance.email:
+            print(f"📧 Email: {instance.email}")

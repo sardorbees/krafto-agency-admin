@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Application
+from .models import ApplicationForm
 
-class ApplicationSerializer(serializers.ModelSerializer):
+class ApplicationFormSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Application
+        model = ApplicationForm
         fields = '__all__'

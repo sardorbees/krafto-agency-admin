@@ -8,3 +8,4 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ['id', 'name', 'total_quantity', 'sold_this_week', 'available_quantity', 'is_active']
+        ref_name = 'InventoryProduct'

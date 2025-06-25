@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import ApplicationCreateAPIView
-from .views import check_new_application
+from .views import ApplicationFormCreateAPIView
+from .views import send_telegram_message
 
 urlpatterns = [
-    path('api/apply/', ApplicationCreateAPIView.as_view(), name='apply'),
-    path('admin/check-new-application/', check_new_application),
+    path('api/application/', ApplicationFormCreateAPIView.as_view(), name='application-create'),
+    path('send-telegram/', send_telegram_message),
 ]

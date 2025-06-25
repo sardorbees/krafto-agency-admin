@@ -9,7 +9,7 @@ urlpatterns = [
     path('user-update/', CustomUserUpdateAPIView.as_view(), name='update_user'),
     path('api/profile/', CustomUserAPIView.as_view(), name="profile"),
 
-    path('cart/', CartDetailAPIView.as_view(), name='cart-detail'),
+    path('api/cart/', CartDetailAPIView.as_view(), name='cart-detail'),
     path('cart/add/', CartItemAddAPIView.as_view(), name='cart-item-add'),
     path('cart/remove/<int:product_id>/', CartItemRemoveAPIView.as_view(), name='cart-item-remove'),
     path('cart/clear/', CartClearAPIView.as_view(), name='cart-clear'),

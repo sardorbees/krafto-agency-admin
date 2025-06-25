@@ -178,7 +178,7 @@ INSTALLED_APPS = [
     'category_card',
     'clientlogo',
     'telegram_orders',
-    'botmessages'
+    'botmessages',
 ]
 
 TELEGRAM_BOT_TOKEN = '7613975897:AAHSzOal47p9jeu62JR1sdI23-mQyb3Sk50'
@@ -266,7 +266,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 
-LANGUAGE_CODE = "ru-uz"
+LANGUAGE_CODE = "ru"
+
+LANGUAGES = [
+    ('ru', 'Русский'),
+    ('uz', "O'zbekcha"),
+]
+
+
 TIME_ZONE = "Asia/Tehran"
 USE_I18N = True
 USE_TZ = True
@@ -420,7 +427,7 @@ CSRF_COOKIE_NAME = "csrftoken"
 CSRF_COOKIE_SAMESITE = "Lax"  
 CSRF_COOKIE_SECURE = True 
 
-CSRF_TRUSTED_ORIGINS = ["https://tash-cleaning-admin-one.vercel.app", "https://krafto-agency-admin.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://krafto-agency-tash.vercel.app", "https://krafto-agency-admin.onrender.com"]
 
 CSRF_COOKIE_HTTPONLY = False
 

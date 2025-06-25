@@ -12,12 +12,12 @@ class NotificationListAPIView(generics.ListAPIView):
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from application.serializers import ApplicationSerializer
+from notifications.serializers import NotificationSerializer
 from notifications.models import Notification
 
 class ApplicationCreateAPIView(APIView):
     def post(self, request):
-        serializer = ApplicationSerializer(data=request.data)
+        serializer = NotificationSerializer(data=request.data)
         if serializer.is_valid():
             instance = serializer.save()
 
